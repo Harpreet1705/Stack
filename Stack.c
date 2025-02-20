@@ -3,7 +3,6 @@
 
 int stack[MAX], top = -1;
 
-// Function to push an element onto the stack
 void push(int value) {
     if (top == MAX - 1) {
         printf("Stack Overflow! Cannot push %d\n", value);
@@ -13,7 +12,6 @@ void push(int value) {
     }
 }
 
-// Function to pop an element from the stack
 void pop() {
     if (top == -1) {
         printf("Stack Underflow! Cannot pop.\n");
@@ -22,7 +20,6 @@ void pop() {
     }
 }
 
-// Function to return the top element of the stack
 void peek() {
     if (top == -1) {
         printf("Stack is empty!\n");
@@ -31,7 +28,6 @@ void peek() {
     }
 }
 
-// Function to display all elements in the stack
 void display() {
     if (top == -1) {
         printf("Stack is empty!\n");
@@ -44,14 +40,13 @@ void display() {
     }
 }
 
-// Main function
 int main() {
     push(10);
     push(20);
     push(30);
     push(40);
     push(50);
-    push(60); // Should trigger overflow
+    push(60); 
 
     display();
 
